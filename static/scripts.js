@@ -55,13 +55,10 @@ function endGame() {
       ? finalGuessedCount
       : revealedCountries.size;
 
-  document.getElementById("final-time").textContent =
-    formatTime(secondsElapsed);
+  document.getElementById("final-time").textContent =formatTime(secondsElapsed);
   document.getElementById("final-guessed").textContent = guessed;
-  document.getElementById("final-missed").textContent =
-    totalCountries - guessed;
-  document.getElementById("final-accuracy").textContent =
-    Math.round((guessed / totalCountries) * 100);
+  document.getElementById("final-missed").textContent =totalCountries - guessed;
+  document.getElementById("final-accuracy").textContent =Math.round((guessed / totalCountries) * 100);
 
   document.getElementById("endgame-overlay").classList.remove("hidden");
   document.getElementById("top-right-controls").classList.add("hidden");
@@ -81,7 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   L.tileLayer(
     "https://cartodb-basemaps-a.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png",
-    { attribution: "&copy; CartoDB", noWrap: false }
+    {
+    attribution: "&copy; CartoDB",
+    noWrap: false
+    }
   ).addTo(map);
 
   input = document.getElementById("guess-input");
@@ -135,8 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     timerInterval = setInterval(() => {
       secondsElapsed++;
-      document.getElementById("timer").textContent =
-        formatTime(secondsElapsed);
+      document.getElementById("timer").textContent = formatTime(secondsElapsed);
     }, 1000);
   });
 
@@ -226,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     revealedCountries = new Set(Object.keys(countryLayers));
     updateProgress();
-    map.setView([20, 0], 2.6, { animate: true, duration: 2 });
+    map.setView([20, 0], 2.6, { animate: true, duration: 3.0 });
     endGame();
   });
 
