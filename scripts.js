@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- START GAME ---------- */
   startBtn.addEventListener("click", () => {
-    if (!dataLoaded) return alert("Loading map data…");
+    // if (!dataLoaded) return alert("Loading map data…");
 
     startBtn.classList.add("hidden");
     playAgainInline.classList.add("hidden");
