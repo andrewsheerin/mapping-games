@@ -62,7 +62,7 @@ const CONTINENT_ID = {
 let continentTotals = {};
 let continentGuessed = {};
 
-const NARROW_BREAKPOINT = 900;
+const NARROW_BREAKPOINT = 700;
 
 /* =========================================================
    HELPERS

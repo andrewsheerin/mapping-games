@@ -230,24 +230,31 @@ html, body {
 }
 
 /* =========================================================
-   RESPONSIVE: STACK TIMER + GIVE UP ON NARROW SCREENS
+   MOBILE: MOVE TIMER + GIVE UP TO BOTTOM
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   #top-right-controls {
     flex-direction: column;
-    align-items: flex-end;   /* keeps it tight to the corner */
-    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+
+    top: auto;
+    right: auto;
+    bottom: 12px;
+    left: 12px;
+
+    transform: none;
+    gap: 5px;
   }
 
   #timer {
-    order: 1;
-  }
-
-  #give-up-btn {
-    order: 2;
+    text-align: left;
+    white-space: nowrap;
   }
 }
+
+
 
 
 
@@ -379,7 +386,7 @@ html, body {
    RESPONSIVE: SHORT HEIGHT – PRIORITIZE LIST
 ========================================================= */
 
-@media (max-height: 500px) {
+@media (max-height: 1000px) {
   #continent-panel #continent-list-view:not(.hidden) ~ .continent-grid {
     display: none;
   }
@@ -462,7 +469,7 @@ html, body {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   #toggle-continent-panel {
     display: block;
   }
