@@ -41,14 +41,14 @@ html, body {
 
 /* Main brand name */
 .brand-name {
-  font-size: 1.45rem;
+  font-size: clamp(1.3rem, 3.8vw, 1.5rem);
   font-weight: 800;
   letter-spacing: 0.02em;
 }
 
 /* Make .io feel secondary */
 .brand-io {
-  font-size: 1.45rem;
+  font-size: clamp(1.3rem, 3.8vw, 1.5rem);
   font-weight: 600;
   opacity: 0.75;
 }
@@ -56,7 +56,7 @@ html, body {
 /* Subtitle / descriptor */
 .brand-subtitle {
   margin-left: 12px;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 2.6vw, 1.1rem);
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -241,8 +241,8 @@ html, body {
 
     top: auto;
     right: auto;
-    bottom: 12px;
-    left: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: calc(12px + env(safe-area-inset-left));
 
     transform: none;
     gap: 5px;
@@ -472,6 +472,7 @@ html, body {
 @media (max-width: 700px) {
   #toggle-continent-panel {
     display: block;
+    right: calc(20px + env(safe-area-inset-right));
   }
 
   #continent-panel {
