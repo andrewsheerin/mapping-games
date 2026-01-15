@@ -270,7 +270,7 @@ html, body {
   color: white;
   border: none;
   cursor: pointer;
-  font-size: clamp(0.9rem, 1.6vw, 1.2rem);  /* clamp(min, preferred, max) */
+  font-size: clamp(0.75rem, 1.6vw, 1.2rem);  /* clamp(min, preferred, max) */
 }
 
 #give-up-btn:hover {
@@ -492,7 +492,7 @@ html, body {
   padding: 6px 12px;
   background: #214156;
   color: white;
-  font-size: clamp(0.9rem, 1.6vw, 1.2rem);
+  font-size: clamp(0.75rem, 1.6vw, 1.2rem);
   font-weight: 550;
 
   border: none;
@@ -602,7 +602,7 @@ html, body {
 
 
 @media (max-width: 700px) {
-  :root { --controls-gutter: 50px; }
+  :root { --controls-gutter: 80px; }
 
   #guess-bar {
     top: 12px;
@@ -617,8 +617,8 @@ html, body {
   /* Bottom bar: time | give up | toggle */
   #top-right-controls {
     position: fixed;
-    left: 12px;
-    right: 12px;
+    left: 15px;
+    right: 15px;
     top: auto;
     bottom: calc(var(--controls-gutter) + env(safe-area-inset-bottom));
     z-index: 1500;
